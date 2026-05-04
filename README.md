@@ -57,9 +57,9 @@ https://mikehv03.github.io
 
 ## Connect
 
-* LinkedIn: [https://www.linkedin.com/in/miguel-%C3%A1ngel-herrera-varela-2b74b226b/](https://www.linkedin.com/in/miguel-%C3%A1ngel-herrera-2b74b226b/)
-* GitHub: https://github.com/mikehv03
-* Email: maherrerav10@gmail.com
+* [LinkedIn](https://www.linkedin.com/in/miguel-%C3%A1ngel-herrera-2b74b226b/)
+* [GitHub] (https://github.com/mikehv03)
+* [Email] (maherrerav10@gmail.com)
 
 ---
 
