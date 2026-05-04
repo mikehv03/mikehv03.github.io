@@ -371,16 +371,78 @@ a {
   margin-top: 0.5rem;
 }
 
-.button {
+.button,
+.btn {
   display: inline-flex;
   min-height: 3rem;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border: 1px solid transparent;
-  border-radius: var(--radius-small);
+  border-radius: 10px;
   padding: 0 1.15rem;
   font-weight: 850;
-  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  transition: background 220ms ease, border-color 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.btn img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  transition: filter 220ms ease;
+}
+
+.btn.linkedin {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: #0A66C2;
+  color: #FFFFFF;
+}
+
+.btn.linkedin img {
+  border-radius: 3px;
+  filter: none;
+}
+
+.btn.linkedin:hover,
+.btn.linkedin:focus-visible {
+  background: #004182;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn.github {
+  border-color: rgba(15, 23, 42, 0.18);
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.btn.github img {
+  filter: brightness(0);
+}
+
+.btn.github:hover,
+.btn.github:focus-visible {
+  background: #DDDDDD;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+body.light-mode .btn.github {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: #000000;
+  color: #FFFFFF;
+}
+
+body.light-mode .btn.github img {
+  filter: brightness(0) invert(1);
+}
+
+body.light-mode .btn.github:hover,
+body.light-mode .btn.github:focus-visible {
+  background: #222222;
+  color: #FFFFFF;
 }
 
 .button-primary {
@@ -1198,6 +1260,27 @@ a {
   transition: all 0.25s ease;
 }
 
+.contact-social {
+  min-height: 4.5rem;
+  justify-content: flex-start;
+  box-shadow: none;
+  padding: 1.05rem;
+}
+
+.contact-social img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-social .contact-label,
+.contact-social .contact-value {
+  color: currentColor;
+}
+
+.contact-social .contact-value {
+  opacity: 0.82;
+}
+
 .contact-card:hover,
 .contact-card:focus-visible {
   border-color: var(--color-gold);
@@ -1226,14 +1309,6 @@ a {
 
 .contact-card-email .contact-icon {
   padding: 0.35rem;
-}
-
-.contact-card-linkedin .contact-icon {
-  padding: 0.38rem;
-}
-
-.contact-card-github .contact-icon {
-  padding: 0.34rem;
 }
 
 .contact-label,
@@ -1402,6 +1477,17 @@ a {
     align-items: center;
   }
 
+  .life-photo-card {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .life-photo {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
   .contact-value {
     font-size: 0.9rem;
   }
@@ -1433,7 +1519,8 @@ a {
     flex-direction: column;
   }
 
-  .button {
+  .button,
+  .btn {
     width: 100%;
   }
 
