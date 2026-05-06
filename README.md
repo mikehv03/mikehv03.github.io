@@ -1,19 +1,30 @@
-# Personal Website
+# Miguel Herrera — Personal Website
 
-**Miguel Ángel Herrera — Finance & Data Science**
+Personal portfolio and retro football arcade experience built with HTML, CSS, and JavaScript.
 
 ---
 
 ## Overview
 
-This is my personal website, designed as a minimal and structured space to present:
+This project combines two different website experiences:
 
-* Academic background
-* Projects
-* Interests beyond work
-* Contact information
+### Formal Portfolio
+A cleaner professional portfolio focused on:
+- education
+- experience
+- projects
+- achievements
+- contact information
 
-The goal is to create a clean and modern digital identity beyond a traditional CV.
+### Retro Football Mode
+An interactive arcade-inspired football universe inspired by classic NES football videogames, featuring:
+- football-style player profiles
+- retro UI design
+- arcade mini-games
+- interactive penalty shootout trivia
+- football-inspired storytelling
+
+The goal of the project is to create a more memorable and personal digital identity beyond a traditional portfolio website.
 
 ---
 
@@ -25,32 +36,45 @@ https://mikehv03.github.io
 
 ## Tech Stack
 
-* HTML5
-* CSS3
-* JavaScript
-* Git & GitHub Pages
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub Pages
 
 ---
 
-## Features
+## Main Features
 
-* Clean and responsive design
-* Structured sections (About, Projects, Connect)
-* “Beyond Work” section for personal development
-* Direct contact links (LinkedIn, GitHub, Email)
+### Formal Portfolio
+- Responsive portfolio layout
+- Experience and education sections
+- Project showcase
+- Contact integration
+- Dark/light themes
+
+### Retro Football Mode
+- NES-style arcade football aesthetic
+- Locker Room player database
+- Match Highlights section
+- Penalty Quiz game
+- Minefield
+- Arkanoid Challenge
+- Blackjack
+- Pixel-inspired UI and animations
 
 ---
 
 ## Project Structure
 
-```
+```text
 .
 ├── index.html
 ├── styles.css
 ├── script.js
 ├── assets/
 ├── logos/
-└── about_me/
+└── README.md
 ```
 
 ---
@@ -58,7 +82,9 @@ https://mikehv03.github.io
 ## Connect
 
 * [LinkedIn](https://www.linkedin.com/in/miguel-%C3%A1ngel-herrera-2b74b226b/)
+
 * [GitHub](https://github.com/mikehv03)
+
 * [Email](maherrerav10@gmail.com)
 
 ---
@@ -69,15 +95,8 @@ This site is deployed using GitHub Pages from the `main` branch.
 
 ---
 
-## Notes
-
-This project is continuously evolving, with ongoing improvements in design, content, and project showcase.
-
----
-
 ## Author
 
 Miguel Ángel Herrera
-Finance & Data Science — ITAM
 
----
+Finance & Data Science — ITAM
