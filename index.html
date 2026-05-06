@@ -5,12 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Miguel Ángel Herrera, ITAM Finance and Data Science student focused on analytics, strategy, markets, and technology.">
   <title>Miguel Ángel Herrera | Finance + Data Science</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header" id="top">
+  <section class="mode-selector" id="mode-selector" aria-labelledby="mode-selector-title">
+    <div class="mode-selector-panel">
+      <p class="mode-kicker">1987 ARCADE SYSTEM</p>
+      <h1 id="mode-selector-title">MIGUEL HERRERA PORTFOLIO</h1>
+      <div class="mode-options" aria-label="Portfolio mode options">
+        <button class="mode-card" type="button" data-mode-select="formal">
+          <span class="mode-card-title">1 PLAYER — FORMAL PORTFOLIO</span>
+        </button>
+        <button class="mode-card" type="button" data-mode-select="football">
+          <span class="mode-card-title">2 PLAYER — RETRO FOOTBALL MODE</span>
+        </button>
+      </div>
+      <p class="press-start">Press Start</p>
+    </div>
+  </section>
+
+  <div class="mode-view" id="formal-mode">
+    <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="#home" aria-label="Miguel Ángel Herrera home" data-tab-link>
         <img class="brand-mark" src="about_me/MAHV.png" alt="">
@@ -39,7 +59,7 @@
     </nav>
   </header>
 
-  <main id="main">
+    <main id="main">
     <section class="hero section tab-panel" id="home" role="tabpanel" aria-labelledby="tab-home" tabindex="0" data-tab-panel>
       <div class="hero-grid">
         <div class="hero-copy reveal">
@@ -553,12 +573,389 @@
         </div>
       </div>
     </section>
-  </main>
+    </main>
 
-  <footer class="site-footer">
+    <footer class="site-footer">
     <p>Designed and built for GitHub Pages by Miguel Ángel Herrera.</p>
     <a href="#home" data-tab-link>Back to home</a>
   </footer>
+    <button class="change-mode-button" type="button" data-mode-reset>Change Mode</button>
+  </div>
+
+  <main class="football-mode mode-view" id="football-mode" aria-labelledby="football-menu-title">
+    <button class="change-mode-button football-change-mode" type="button" data-mode-reset>CHANGE MODE</button>
+    <header class="football-header">
+      <button class="football-brand" type="button" data-football-menu-open data-football-target="football-menu" aria-label="Retro Football Mode main menu">
+        <span class="football-crest" aria-hidden="true">
+          <img src="about_me/Overall_retro.png" alt="">
+        </span>
+        <span class="football-brand-copy">
+          <span class="football-brand-kicker">Main Menu</span>
+          <span class="football-brand-name">Miguel Herrera</span>
+          <span class="football-brand-ovr">OVR 91</span>
+        </span>
+      </button>
+      <nav class="football-nav" aria-label="Retro football sections">
+        <button type="button" data-football-target="football-menu">Main Menu</button>
+        <button type="button" data-football-target="football-play">Play</button>
+        <button type="button" data-football-target="football-locker">Locker Room</button>
+        <button type="button" data-football-target="football-highlights">Match Highlights</button>
+        <button type="button" data-football-target="football-arcade">Arcade Games</button>
+        <button type="button" data-football-target="football-contact">Contact</button>
+      </nav>
+    </header>
+
+    <div class="football-loading" data-football-loading aria-live="polite" aria-hidden="true">
+      <span data-football-loading-text>LOADING PLAYER DATA...</span>
+    </div>
+
+    <aside class="football-commentary" data-football-commentary aria-live="polite">
+      <span>Strong analytical vision from the ITAM midfielder.</span>
+    </aside>
+
+    <section class="football-main-menu football-screen is-active" id="football-menu" aria-labelledby="football-menu-title">
+      <div class="football-menu-panel">
+        <div class="football-menu-title">
+          <p class="football-kicker">NES Football Universe</p>
+          <h1 id="football-menu-title">Miguel Herrera FC</h1>
+          <p class="press-start football-press-start">Press Start</p>
+          <div class="football-news-ticker" aria-label="Retro transfer rumors">
+            <span>TRANSFER WIRE</span>
+            <strong data-football-ticker>Real Madrid scouts monitoring Uber midfielder.</strong>
+          </div>
+        </div>
+        <div class="football-menu-layout">
+          <nav class="football-menu-list" aria-label="Retro football main menu">
+            <button type="button" data-football-menu-item data-football-target="football-play" data-preview-title="PLAY" data-preview-copy="Enter Penalty Quiz directly, select a Miguel profile, and take the shootout." data-preview-meta="Penalty Quiz | Player Select">Play</button>
+            <button type="button" data-football-menu-item data-football-target="football-locker" data-preview-title="LOCKER ROOM" data-preview-copy="Open the player database: ITAM Miguel, Uber Miguel, Incode Miguel, and Miguel." data-preview-meta="Scouting Center | Personal Files">Locker Room</button>
+            <button type="button" data-football-menu-item data-football-target="football-highlights" data-preview-title="MATCH HIGHLIGHTS" data-preview-copy="Unlocked projects, competitions, technical builds, and leadership achievements." data-preview-meta="Projects | Achievements">Match Highlights</button>
+            <button type="button" data-football-menu-item data-football-target="football-arcade" data-preview-title="ARCADE GAMES" data-preview-copy="Play Miguel Herrera FC’s favorite arcade games throughout his life." data-preview-meta="2 Games | NES Arcade">Arcade Games</button>
+            <button type="button" data-football-menu-item data-football-target="football-contact" data-preview-title="CONTACT" data-preview-copy="Open the transfer office: email, LinkedIn, and GitHub." data-preview-meta="Transfer Window | Open">Contact</button>
+            <button type="button" data-mode-reset data-football-menu-item data-preview-title="Back to Mode Select" data-preview-copy="Return to the arcade start screen and choose another portfolio mode." data-preview-meta="System Menu">Back to Mode Select</button>
+          </nav>
+          <aside class="football-preview-card" aria-live="polite">
+            <div class="pixel-miguel-card has-retro-photo">
+              <img class="retro-photo" src="about_me/Overall_retro.png" alt="Retro football overall portrait of Miguel Herrera">
+              <div class="pixel-miguel-fallback" aria-hidden="true">
+                <span class="pixel-hair"></span>
+                <span class="pixel-face"></span>
+                <span class="pixel-glasses"></span>
+                <span class="pixel-shirt"></span>
+                <span class="pixel-blazer"></span>
+              </div>
+            </div>
+            <p class="football-kicker">Preview Panel</p>
+            <h2 data-football-preview-title>Main Menu</h2>
+            <p data-football-preview-copy>Green pitch, black scoreboard, and Miguel Herrera FC ready for kick off.</p>
+            <span class="football-badge" data-football-preview-meta>NES Arcade | Mode Select</span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="football-section" id="football-highlights">
+      <button class="football-back-button" type="button" data-football-target="football-menu">Main Menu</button>
+      <div class="football-section-heading">
+        <p class="football-kicker">Match Highlights</p>
+        <h2>Unlocked achievements from projects, competitions, and leadership.</h2>
+      </div>
+      <div class="football-card-grid football-card-grid-2">
+        <article class="football-card football-highlight-card">
+          <span class="football-badge">Data Project</span>
+          <span class="highlight-association">Associated with: ITAM</span>
+          <h3>Chicago Crime Analysis (2001-Present)</h3>
+          <p>Analyzed roughly 8 million Chicago crime records with SQL, normalization, cleaning, and trend analysis.</p>
+          <a class="football-link" href="https://github.com/mikehv03/Chicago-Crimes-2001-April-2024" target="_blank" rel="noreferrer">Open GitHub</a>
+        </article>
+        <article class="football-card football-highlight-card">
+          <span class="football-badge">Technical Project</span>
+          <span class="highlight-association">Associated with: ITAM</span>
+          <h3>finportfolio - Portfolio Theory &amp; Asset Pricing Library</h3>
+          <p>Built a Python library for portfolio optimization, CAPM, APT, factor models, risk metrics, and investment analysis.</p>
+          <a class="football-link" href="https://github.com/mikehv03/finportfolio" target="_blank" rel="noreferrer">Open GitHub</a>
+        </article>
+        <article class="football-card football-highlight-card">
+          <span class="football-badge">Competition</span>
+          <span class="highlight-association">Associated with: ITAM</span>
+          <h3>2nd Place - Finance Knowledge Marathon</h3>
+          <p>Led a team of four through valuation, IRR, capital structure, debt capacity, and financing strategy analysis.</p>
+        </article>
+        <article class="football-card football-highlight-card">
+          <span class="football-badge">Leadership</span>
+          <span class="highlight-association">Associated with: Miguel</span>
+          <h3>Undersecretary General - OLINMUN</h3>
+          <p>Coordinated more than 60 students across 15 committees with structured evaluation and hybrid participation models.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="football-section" id="football-locker">
+      <button class="football-back-button" type="button" data-football-target="football-menu">Main Menu</button>
+      <div class="football-section-heading">
+        <p class="football-kicker">Locker Room</p>
+        <h2>Player database: four versions of Miguel on the same squad.</h2>
+      </div>
+
+      <div class="locker-room-database">
+        <div class="locker-profile-grid">
+          <article class="locker-player-card theme-itam">
+            <div class="locker-card-header">
+              <div class="locker-avatar has-retro-photo" data-avatar="itam">
+                <img class="retro-photo" src="about_me/ITAM_retro.png" alt="Retro football avatar of ITAM Miguel">
+                <span class="avatar-hair"></span><span class="avatar-face"></span><span class="avatar-glasses"></span><span class="avatar-kit"></span>
+              </div>
+              <div>
+                <p class="football-kicker">Academy File</p>
+                <h3>ITAM Miguel</h3>
+                <p>Finance &amp; Data Science Academy Player</p>
+              </div>
+              <strong class="locker-ovr">OVR 91</strong>
+            </div>
+            <p class="locker-generated-report">ITAM Miguel is a green-jersey academy prospect carrying Finance and Data Science in the same kit, proud of surviving the two-degree fixture list. Corporate Finance shaped his positioning, Mathematical Statistics tested his stamina, and Algorithms and Programming still feel like the cleanest pass on the pitch.</p>
+            <div class="locker-stat-list">
+              <div class="locker-stat" style="--stat:90"><span>Programming</span><strong>90</strong><i></i></div>
+              <div class="locker-stat" style="--stat:89"><span>Data Analysis</span><strong>89</strong><i></i></div>
+              <div class="locker-stat" style="--stat:92"><span>Finance</span><strong>92</strong><i></i></div>
+              <div class="locker-stat" style="--stat:88"><span>Statistics</span><strong>88</strong><i></i></div>
+              <div class="locker-stat" style="--stat:94"><span>Discipline</span><strong>94</strong><i></i></div>
+              <div class="locker-stat" style="--stat:95"><span>Academic Consistency</span><strong>95</strong><i></i></div>
+            </div>
+            <div class="locker-traits"><span>Structured</span><span>Curious</span><span>High Standards</span></div>
+            <div class="football-tags"><span>SQL</span><span>Python</span><span>Java</span><span>R</span><span>Finance</span><span>AI</span><span>Statistics</span><span>Databases</span></div>
+          </article>
+
+          <article class="locker-player-card theme-uber">
+            <div class="locker-card-header">
+              <div class="locker-avatar has-retro-photo" data-avatar="uber">
+                <img class="retro-photo" src="about_me/Uber_retro.png" alt="Retro football avatar of Uber Miguel">
+                <span class="avatar-hair"></span><span class="avatar-face"></span><span class="avatar-glasses"></span><span class="avatar-kit"></span>
+              </div>
+              <div>
+                <p class="football-kicker">Current Club</p>
+                <h3>Uber Miguel</h3>
+                <p>Strategy &amp; Planning Midfielder</p>
+              </div>
+              <strong class="locker-ovr">OVR 92</strong>
+            </div>
+            <p class="locker-generated-report">Uber Miguel joined the club in March 2026 as a black-jersey midfielder for Strategy &amp; Planning Mobility Mexico. He likes high-impact business problems when the scouting report is incomplete, then turns pressure into clearer decisions, sharper communication, and cleaner movement through the mobility midfield.</p>
+            <div class="locker-stat-list">
+              <div class="locker-stat" style="--stat:92"><span>Market Analysis</span><strong>92</strong><i></i></div>
+              <div class="locker-stat" style="--stat:90"><span>Demand Trends</span><strong>90</strong><i></i></div>
+              <div class="locker-stat" style="--stat:89"><span>Growth Forecasting</span><strong>89</strong><i></i></div>
+              <div class="locker-stat" style="--stat:88"><span>User Behavior</span><strong>88</strong><i></i></div>
+              <div class="locker-stat" style="--stat:87"><span>Operations</span><strong>87</strong><i></i></div>
+              <div class="locker-stat" style="--stat:91"><span>Business Judgment</span><strong>91</strong><i></i></div>
+            </div>
+            <div class="locker-traits"><span>Composed</span><span>Analytical</span><span>Practical</span></div>
+            <div class="football-tags"><span>Market Analysis</span><span>Strategy</span><span>Operations</span><span>Growth Forecasting</span></div>
+          </article>
+
+          <article class="locker-player-card theme-incode">
+            <div class="locker-card-header">
+              <div class="locker-avatar has-retro-photo" data-avatar="incode">
+                <img class="retro-photo" src="about_me/Incode_retro.png" alt="Retro football avatar of Incode Miguel">
+                <span class="avatar-hair"></span><span class="avatar-face"></span><span class="avatar-glasses"></span><span class="avatar-kit"></span>
+              </div>
+              <div>
+                <p class="football-kicker">Scouting Network</p>
+                <h3>Incode Miguel</h3>
+                <p>M&amp;A Scout</p>
+              </div>
+              <strong class="locker-ovr">OVR 90</strong>
+            </div>
+            <p class="locker-generated-report">Incode Miguel is the blue-and-white M&amp;A scout who lives on market research, expansion angles, and companies with genuinely innovative products. He reads potential synergies like passing lanes between businesses, then helps turn the chaos into a structured M&amp;A pipeline instead of a pile of random transfer rumors.</p>
+            <div class="locker-stat-list">
+              <div class="locker-stat" style="--stat:90"><span>Market Research</span><strong>90</strong><i></i></div>
+              <div class="locker-stat" style="--stat:89"><span>Competitive Analysis</span><strong>89</strong><i></i></div>
+              <div class="locker-stat" style="--stat:87"><span>M&amp;A Pipeline</span><strong>87</strong><i></i></div>
+              <div class="locker-stat" style="--stat:88"><span>Target Identification</span><strong>88</strong><i></i></div>
+              <div class="locker-stat" style="--stat:91"><span>Strategic Thinking</span><strong>91</strong><i></i></div>
+              <div class="locker-stat" style="--stat:89"><span>Financial Criteria</span><strong>89</strong><i></i></div>
+            </div>
+            <div class="locker-traits"><span>Observant</span><span>Strategic</span><span>Selective</span></div>
+            <div class="football-tags"><span>M&amp;A</span><span>Market Research</span><span>Competitive Analysis</span><span>Strategy</span></div>
+          </article>
+
+          <article class="locker-player-card theme-pumas">
+            <div class="locker-card-header">
+              <div class="locker-avatar has-retro-photo" data-avatar="pumas">
+                <img class="retro-photo" src="about_me/Pumas_retro.png" alt="Retro football avatar of Miguel">
+                <span class="avatar-hair"></span><span class="avatar-face"></span><span class="avatar-glasses"></span><span class="avatar-kit"></span>
+              </div>
+              <div>
+                <p class="football-kicker">Life Beyond Work</p>
+                <h3>Miguel</h3>
+                <p>Life Beyond Work Player</p>
+              </div>
+              <strong class="locker-ovr">OVR 93</strong>
+            </div>
+            <p class="locker-generated-report">Miguel runs on garra, fuerza, espíritu: Pumas UNAM stitched into the badge, FC Barcelona possession in Europe, and Pedri pausa whenever the match needs calm. The 2011 Liga MX final still plays like championship footage, Álvaro Díaz handles the soundtrack, family and friends bring tranquility, and cooking remains a shocking 0 OVR.</p>
+            <div class="locker-stat-list">
+              <div class="locker-stat" style="--stat:90"><span>Traveler</span><strong>90</strong><i></i></div>
+              <div class="locker-stat" style="--stat:0"><span>Cook</span><strong>0</strong><i></i></div>
+              <div class="locker-stat" style="--stat:80"><span>Chess Player</span><strong>80</strong><i></i></div>
+              <div class="locker-stat" style="--stat:89"><span>Goalkeeper</span><strong>89</strong><i></i></div>
+              <div class="locker-stat" style="--stat:75"><span>Guitar</span><strong>75</strong><i></i></div>
+              <div class="locker-stat" style="--stat:95"><span>FIFA / Warzone</span><strong>95</strong><i></i></div>
+              <div class="locker-stat" style="--stat:99"><span>Family &amp; Friends</span><strong>99</strong><i></i></div>
+              <div class="locker-stat" style="--stat:95"><span>Football Passion</span><strong>95</strong><i></i></div>
+            </div>
+            <div class="locker-traits"><span>Loyal</span><span>Competitive</span><span>Grounded</span></div>
+            <div class="football-tags"><span>Football</span><span>Chess</span><span>Gaming</span><span>Guitar</span><span>Family</span><span>Barça</span><span>Pumas</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="football-section" id="football-play">
+      <button class="football-back-button" type="button" data-football-target="football-menu">Main Menu</button>
+      <div class="football-section-heading">
+        <p class="football-kicker">Play</p>
+        <h2>Penalty Quiz: select a player and take the shootout.</h2>
+      </div>
+      <article class="arcade-cabinet penalty-quiz penalty-standalone" data-arcade-penalty>
+        <div class="arcade-cabinet-header">
+          <p class="football-kicker">Penalty Quiz</p>
+          <h3>Play</h3>
+          <span>Player <strong data-arcade-penalty-player>None</strong> / Status <strong data-arcade-penalty-status>Ready</strong></span>
+        </div>
+        <div class="penalty-player-select" data-penalty-panel="select">
+          <h4>SELECT PLAYER</h4>
+          <div class="penalty-carousel">
+            <button class="penalty-arrow-btn" type="button" data-penalty-prev aria-label="Previous player">&#9664;</button>
+            <div class="penalty-carousel-card" data-penalty-carousel-card></div>
+            <button class="penalty-arrow-btn" type="button" data-penalty-next aria-label="Next player">&#9654;</button>
+          </div>
+          <button class="football-link" type="button" data-penalty-back>BACK TO HOME</button>
+        </div>
+        <div class="penalty-match" data-penalty-panel="match" hidden>
+          <div class="penalty-arcade-scoreboard" aria-live="polite">
+            <span>PLAYER: <strong data-penalty-score-player>---</strong></span>
+            <span>QUESTION: <strong data-penalty-score-question>0/0</strong></span>
+            <span>GOALS: <strong data-penalty-score-goals>0</strong></span>
+            <span>STATUS: <strong data-penalty-score-status>READY</strong></span>
+          </div>
+          <div class="penalty-field">
+            <p class="penalty-field-question" data-arcade-penalty-question>Question loading...</p>
+            <div class="penalty-goal-wrap">
+              <div class="goal-floor-depth" aria-hidden="true"></div>
+              <div class="goal-side-left" aria-hidden="true"></div>
+              <div class="goal-side-right" aria-hidden="true"></div>
+              <div class="goal-net" aria-hidden="true"></div>
+              <div class="goal-frame-front" aria-hidden="true">
+                <div class="goal-post-left"></div>
+                <div class="goal-post-right"></div>
+                <div class="goal-crossbar"></div>
+              </div>
+              <img class="penalty-keeper" data-penalty-keeper src="about_me/MAHV_portero_retro_transparent.png" alt="" aria-hidden="true">
+              <div class="penalty-ball" data-penalty-ball></div>
+              <strong class="penalty-shot-result" data-arcade-penalty-result aria-live="polite"></strong>
+              <div class="answer-zone-grid penalty-answer-grid" data-arcade-penalty-options></div>
+            </div>
+          </div>
+          <div class="penalty-control-row">
+            <button class="football-link" type="button" data-penalty-games>BACK TO MENU</button>
+            <button class="football-link" type="button" data-penalty-change-player>CHANGE PLAYER</button>
+            <button class="football-link" type="button" data-penalty-restart>RESTART</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="football-section" id="football-arcade">
+      <button class="football-back-button" type="button" data-football-target="football-menu">Main Menu</button>
+      <div class="football-section-heading">
+        <p class="football-kicker">Arcade Games</p>
+        <h2>Three playable retro challenges from Miguel Herrera FC.</h2>
+      </div>
+      <div class="arcade-grid arcade-grid-trio">
+
+        <article class="arcade-cabinet" data-minefield>
+          <div class="arcade-cabinet-header">
+            <p class="football-kicker">Game 01</p>
+            <h3>Minefield</h3>
+            <span>Safe tiles <strong data-mine-score>0</strong></span>
+          </div>
+          <div class="mine-grid" data-mine-grid aria-label="5 by 5 minefield game"></div>
+          <p class="arcade-status" data-mine-status>Avoid 3 random mines.</p>
+          <button class="football-link" type="button" data-mine-reset>Reset Minefield</button>
+        </article>
+
+        <article class="arcade-cabinet" data-arkanoid>
+          <div class="arcade-cabinet-header">
+            <p class="football-kicker">Game 02</p>
+            <h3>Arkanoid Challenge</h3>
+            <span>Score <strong data-arkanoid-score>0</strong></span>
+          </div>
+          <canvas class="arkanoid-canvas" width="420" height="260" data-arkanoid-canvas aria-label="Football brick breaker game"></canvas>
+          <p class="arcade-status" data-arkanoid-status>Use &#8592; &#8594; or A/D to move. Press KICK OFF to start.</p>
+          <div class="arkanoid-controls">
+            <button class="football-link" type="button" data-arkanoid-kickoff>KICK OFF</button>
+            <button class="football-link" type="button" data-arkanoid-reset>RESET</button>
+          </div>
+        </article>
+
+        <article class="arcade-cabinet arcade-cabinet-blackjack" data-blackjack>
+          <div class="arcade-cabinet-header">
+            <p class="football-kicker">Game 03</p>
+            <h3>Blackjack</h3>
+            <span>Status: <strong data-bj-status>READY</strong></span>
+          </div>
+          <div class="blackjack-table">
+            <div class="blackjack-hand">
+              <p class="bj-hand-label">DEALER</p>
+              <div class="bj-cards" data-bj-dealer-cards aria-label="Dealer cards">
+                <span class="bj-empty">deal to start</span>
+              </div>
+              <p class="bj-score-line">Score: <strong data-bj-dealer-score>&#8212;</strong></p>
+            </div>
+            <div class="blackjack-hand">
+              <p class="bj-hand-label">YOU</p>
+              <div class="bj-cards" data-bj-player-cards aria-label="Player cards">
+                <span class="bj-empty">deal to start</span>
+              </div>
+              <p class="bj-score-line">Score: <strong data-bj-player-score>&#8212;</strong></p>
+            </div>
+          </div>
+          <p class="blackjack-result" data-bj-result aria-live="polite"></p>
+          <div class="blackjack-controls">
+            <button class="football-link" type="button" data-bj-deal>DEAL</button>
+            <button class="football-link" type="button" data-bj-hit disabled>HIT</button>
+            <button class="football-link" type="button" data-bj-stand disabled>STAND</button>
+            <button class="football-link" type="button" data-bj-reset>RESET</button>
+          </div>
+          <p class="arcade-status">Beat dealer. Closest to 21 without busting. A = 1 or 11.</p>
+        </article>
+
+      </div>
+      <button class="secret-stadium" type="button" data-secret-stadium>Hidden Stadium</button>
+    </section>
+
+    <section class="football-section" id="football-contact">
+      <button class="football-back-button" type="button" data-football-target="football-menu">Main Menu</button>
+      <div class="football-section-heading">
+        <p class="football-kicker">Contact</p>
+        <h2>Transfer window open for conversations.</h2>
+      </div>
+      <div class="football-contact-grid">
+        <a class="football-contact-card" href="mailto:maherrerav10@gmail.com">
+          <img src="logos/gmail_retro_logo.png" alt="" aria-hidden="true">
+          <span>Email</span>
+          <strong>maherrerav10@gmail.com</strong>
+        </a>
+        <a class="football-contact-card" href="https://www.linkedin.com/in/miguel-%C3%A1ngel-herrera-varela-2b74b226b/" target="_blank" rel="noreferrer">
+          <img src="logos/LinkedIn_retro_logo.png" alt="" aria-hidden="true">
+          <span>LinkedIn</span>
+          <strong>Miguel Ángel Herrera Varela</strong>
+        </a>
+        <a class="football-contact-card" href="https://github.com/mikehv03" target="_blank" rel="noreferrer">
+          <img src="logos/github_retro_logo.png" alt="" aria-hidden="true">
+          <span>GitHub</span>
+          <strong>mikehv03</strong>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
     <symbol id="icon-chess-king" viewBox="0 0 24 24">
